@@ -1,0 +1,16 @@
+syntax = "proto3";
+package understanding_protobuf;
+
+option go_package = "github.com/coelhucas/protobuf/generated-pb";
+
+message Player {
+  string name = 1;
+  int32 id = 2; // unique
+
+  message Position {
+    int32 x = 1;
+    int32 y = 2;
+  }
+  
+  Position position = 3;
+}
